@@ -1,0 +1,6 @@
+@AuthModelProject_HostAddress = http://localhost:5143
+
+GET {{AuthModelProject_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
