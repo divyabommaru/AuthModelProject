@@ -11,7 +11,6 @@ var configuration = builder.Configuration;
 builder.Services.AddDbContext<AuthDbContext>(options =>
     options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
-// ✅ Fix: Use AddIdentity instead of AddDefaultIdentity
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()
     .AddEntityFrameworkStores<AuthDbContext>()
     .AddDefaultTokenProviders();
